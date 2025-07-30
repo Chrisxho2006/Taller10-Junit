@@ -21,5 +21,5 @@ public class CalculatorSMP {
         String ret = Operations.Solve(question);
         System.out.println(ret);
     }
-    
+
 }
