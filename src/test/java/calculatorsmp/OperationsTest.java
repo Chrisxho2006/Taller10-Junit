@@ -22,6 +22,33 @@ public class OperationsTest {
         String result = Operations.Solve(formula);
         assertEquals(expResult, result);
     }
+    
+    @Test
+    @DisplayName("Test de Resta")
+    public void T3() {
+        String formula = "20-2";
+        String expResult = "20-2=18";
+        String result = Operations.Solve(formula);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    @DisplayName("Test de Producto entre enteros: ")
+    public void T4() {
+        String formula = "24*5";
+        String expResult = "24*5=120";
+        String result = Operations.Solve(formula);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    @DisplayName("Test de División entre enteros: ")
+    public void T5() {
+        String formula = "30/5";
+        String expResult = "30/5=6";
+        String result = Operations.Solve(formula);
+        assertEquals(expResult, result);
+    }
 
     @Test
     @DisplayName("Prueba múltiples operaciones de precedencia mixta")
@@ -50,4 +77,6 @@ public class OperationsTest {
         String result = Operations.Solve(formula);
         assertEquals(expResult, result);
     }
+    
+    
 }
