@@ -50,6 +50,33 @@ public class OperationsTest {
         assertEquals(expResult, result);
     }
 
+        @Test
+    @DisplayName("Prueba multiplicar luego sumar")
+    public void T6() {
+        String formula = "2+3*4";
+        String expResult = "2+3*4=14";
+        String result = Operations.Solve(formula);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    @DisplayName("Prueba dividir luego restar")
+    public void T7() {
+        String formula = "10-6/2";
+        String expResult = "10-6/2=7";
+        String result = Operations.Solve(formula);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    @DisplayName("Prueba con múltiples operaciones de la misma precedencia")
+    public void T8() {
+        String formula = "10+5-3";
+        String expResult = "10+5-3=12";
+        String result = Operations.Solve(formula);
+        assertEquals(expResult, result);
+    }
+    
     @Test
     @DisplayName("Prueba múltiples operaciones de precedencia mixta")
     public void T9() {
